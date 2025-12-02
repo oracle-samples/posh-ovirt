@@ -1,30 +1,48 @@
-*This repository acts as a template for all of Oracle’s GitHub repositories. It contains information about the guidelines for those repositories. All files and sections contained in this template are mandatory, and a GitHub app ensures alignment with these guidelines. To get started with a new repository, replace the italic paragraphs with the respective text for your project.*
-
 # Project name
 
-*Describe your project's features, functionality and target audience*
+PowerShell Module for OLVM (oVirt) Management.
+
+Quick Intro:
+All Functions and classes are prefaced with the lowercase letter "o" (for oVirt) to avoid PowerShell naming conflicts with other modules
+
+Uses a "Connection Management" PSObject To store connection data required to maintain connectivity to each oVirt server
+
+oVirt has what I term Base (or primary) objects and Secondary objects that are "children" of the Base objects, therefore
+the secondary functions require the instantiation of base objects as a reference. I.e. an oVmNic can't exist without a base oVM
+
+Base Objects can be displayed (after connecting to an oVirt Server) using the command:
+Get-oVirt -oVirtServerName $oVirtServerName | Select -ExpandProperty Link | Sort "rel"
+
+Note: most returned PSObjects have methods in their classes allowing users to retrieve additional properties about the object, not natively 
+returned by oVirt. This also saves time by not retrieving data until/if needed for additional activity. Many of these additional properties 
+are recursive, for additional drill down.
+
+Also Note: this project is a work in progress, some of the functions were built based on (often vague) documentation, and I don't have a test 
+environment with some of the features required to validate them. So if something doesn't work there is a framework for most of the objects, 
+and a small handful of more obscure items, that I have not created yet. However following the format I've laid out, it should be possible to 
+build or fix functions.
 
 ## Installation
 
 *Provide detailed step-by-step installation instructions. You can name this section **How to Run** or **Getting Started** instead of **Installation** if that's more acceptable for your project*
+Copy the Folder PoSh-oVirt to a valid PowerShell Modules path on your system. Typically found by opening a PowerShell console and typing:
+$Env:PSModulePath -Split ';'
 
 ## Documentation
 
-*Developer-oriented documentation can be published on GitHub, but all product documentation must be published on <https://docs.oracle.com>*
+All User Functions have Get-Help based documentation
+I.e.
+Get-Help Get-oVirt
 
 ## Examples
 
-*Describe any included examples or provide a link to a demo/tutorial*
+I use the following example to connect:
 
-## Help
-
-*Inform users on where to get help or how to receive official support from Oracle (if applicable)*
-
-## Contributing
-
-*If your project has specific contribution requirements, update the CONTRIBUTING.md file to ensure those requirements are clearly explained*
-
-This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
+Get-Module -Name "Posh-oVirt" -ListAvailable | Import-Module
+$oVirtServerName = "ServerName.Domain.com"
+$oVirtCredential = (Get-Credential -UserName 'admin@internal' -Message "Enter Password for $($oVirtServerName)")
+Connect-oVirtServer -oVirtServerName $oVirtServerName -oVirtCredential $oVirtCredential
+Get-oVirt -oVirtServerName $oVirtServerName | Select *
 
 ## Security
 
@@ -32,11 +50,7 @@ Please consult the [security guide](./SECURITY.md) for our responsible security 
 
 ## License
 
-*The correct copyright notice format for both documentation and software is*
-    "Copyright (c) [year,] year Oracle and/or its affiliates."
-*You must include the year the content was first released (on any platform) and the most recent year in which it was revised*
-
-Copyright (c) 2023 Oracle and/or its affiliates.
+Copyright (c) 2024,2025 Oracle and/or its affiliates.
 
 *Replace this statement if your project is not licensed under the UPL*
 
