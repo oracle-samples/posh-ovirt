@@ -1,5 +1,4 @@
-# Project name
-PoSh-oVirt
+# PoSh-oVirt
 
 A PowerShell Module for OLVM (oVirt) Management.
 
