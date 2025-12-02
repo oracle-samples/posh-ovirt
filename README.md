@@ -17,10 +17,13 @@ Note: most returned PSObjects have methods in their classes allowing users to re
 returned by oVirt. This also saves time by not retrieving data until/if needed for additional activity. Many of these additional properties 
 are recursive, for additional drill down.
 
-Also Note: this project is a work in progress, some of the functions were built based on (often vague) documentation, and I don't have a test 
+Note: This project is a work in progress, some of the functions were built based on (often vague) documentation, and I don't have a test 
 environment with some of the features required to validate them. So if something doesn't work there is a framework for most of the objects, 
 and a small handful of more obscure items, that I have not created yet. However following the format I've laid out, it should be possible to 
 build or fix functions.
+
+Note: This module can make use of several 3rd party software features if already installed by the user. Putty, Plink, Virtual Machine Manager, and Posh-SSH.
+None are required, and are NOT INCLUDED with this sample code.
 
 ## Installation
 
