@@ -1,6 +1,7 @@
 # Project name
+PoSh-oVirt
 
-PowerShell Module for OLVM (oVirt) Management.
+A PowerShell Module for OLVM (oVirt) Management.
 
 Quick Intro:
 All Functions and classes are prefaced with the lowercase letter "o" (for oVirt) to avoid PowerShell naming conflicts with other modules
