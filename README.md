@@ -13,7 +13,7 @@ the secondary functions require the instantiation of base objects as a reference
 Base Objects can be displayed (after connecting to an oVirt Server) using the command:
 Get-oVirt -oVirtServerName $oVirtServerName | Select -ExpandProperty Link | Sort "rel"
 
-Note: most returned PSObjects have methods in their classes allowing users to retrieve additional properties about the object, not natively 
+Note: Most returned PSObjects have methods in their classes allowing users to retrieve additional properties about the object, not natively 
 returned by oVirt. This also saves time by not retrieving data until/if needed for additional activity. Many of these additional properties 
 are recursive, for additional drill down.
 
