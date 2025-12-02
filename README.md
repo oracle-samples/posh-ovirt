@@ -24,15 +24,14 @@ build or fix functions.
 
 ## Installation
 
-*Provide detailed step-by-step installation instructions. You can name this section **How to Run** or **Getting Started** instead of **Installation** if that's more acceptable for your project*
 Copy the Folder PoSh-oVirt to a valid PowerShell Modules path on your system. Typically found by opening a PowerShell console and typing:
 $Env:PSModulePath -Split ';'
 
 ## Documentation
 
-All User Functions have Get-Help based documentation
-I.e.
-Get-Help Get-oVirt
+All User Functions have PowerShell Get-Help based documentation.
+  Example:
+  Get-Help Get-oVirt
 
 ## Examples
 
@@ -51,8 +50,6 @@ Please consult the [security guide](./SECURITY.md) for our responsible security 
 ## License
 
 Copyright (c) 2024,2025 Oracle and/or its affiliates.
-
-*Replace this statement if your project is not licensed under the UPL*
 
 Released under the Universal Permissive License v1.0 as shown at
 <https://oss.oracle.com/licenses/upl/>.
