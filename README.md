@@ -46,7 +46,7 @@ $oVirtCredential = (Get-Credential -UserName 'admin@internal' -Message "Enter Pa
 Connect-oVirtServer -oVirtServerName $oVirtServerName -oVirtCredential $oVirtCredential
 Get-oVirt -oVirtServerName $oVirtServerName | Select *
 
-##Help
+## Link
 
 https://github.com/oracle-samples/posh-ovirt/
 
