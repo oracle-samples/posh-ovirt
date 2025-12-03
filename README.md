@@ -56,6 +56,10 @@ https://docs.oracle.com/en/virtualization/oracle-linux-virtualization-manager/
 
 https://www.ovirt.org/
 
+## Contributing
+
+This project welcomes contributions from the community. Before submitting a pull request, please [review our contribution guide](./CONTRIBUTING.md)
+
 ## Security
 
 Please consult the [security guide](./SECURITY.md) for our responsible security vulnerability disclosure process
