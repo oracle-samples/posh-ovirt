@@ -5824,7 +5824,8 @@ Function Get-oAffinityLabel{
 			#}
 		}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -5930,7 +5931,8 @@ Function Get-oBookmark{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -6035,7 +6037,8 @@ Function Get-oCdRom{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -6142,7 +6145,8 @@ Function Get-oCluster{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -6250,7 +6254,8 @@ Function Get-oClusterLevel{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -6356,7 +6361,8 @@ Function Get-oCpuProfile{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -6461,7 +6467,8 @@ Function Get-oDataCenter{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -6567,7 +6574,8 @@ Function Get-oDisk{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -6674,7 +6682,8 @@ Function Get-oDiskProfile{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -6781,7 +6790,8 @@ Function Get-oDomain{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -7278,7 +7288,8 @@ Function Get-oExternalHostProvider{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -7382,7 +7393,8 @@ Function Get-oGroup{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -7487,7 +7499,8 @@ Function Get-oHost{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -7590,7 +7603,8 @@ Function Get-oIcon{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -7694,7 +7708,8 @@ Function Get-oImageTransfer{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -7797,7 +7812,8 @@ Function Get-oInstanceType{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -7900,7 +7916,8 @@ Function Get-oJob{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8004,7 +8021,8 @@ Function Get-oKatelloerrata{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8107,7 +8125,8 @@ Function Get-oMacPool{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8211,7 +8230,8 @@ Function Get-oNetwork{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8316,7 +8336,8 @@ Function Get-oNetworkFilter{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8419,7 +8440,8 @@ Function Get-oOpenStackImageProvider{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8520,7 +8542,8 @@ Function Get-oOpenStackNetworkProvider{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8624,7 +8647,8 @@ Function Get-oOpenStackVolumeProvider{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8727,7 +8751,8 @@ Function Get-oOperatingSystem{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8834,7 +8859,8 @@ Function Get-oPermission{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -8938,7 +8964,8 @@ Function Get-oRole{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -9041,7 +9068,8 @@ Function Get-oSchedulingPolicy{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -9142,7 +9170,8 @@ Function Get-oSchedulingPolicyUnit{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -9244,7 +9273,8 @@ Function Get-oStorageConnection{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -9347,7 +9377,8 @@ Function Get-oStorageDomain{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -9449,7 +9480,8 @@ Function Get-oTag{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -9557,7 +9589,8 @@ Function Get-oTemplate{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -9660,7 +9693,8 @@ Function Get-oUser{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -9928,7 +9962,8 @@ Function Get-oVM{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -10028,7 +10063,8 @@ Function Get-oVmPool{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}
@@ -10134,7 +10170,8 @@ Function Get-oVNicProfile{
 		$ParametersToSend.Add("oVxObjectName",$oVxObjectName)
 		IF($PSBoundParameters['PipedObject']){$ParametersToSend.Add("ParentUid",$PSBoundParameters['PipedObject'].Uid);$ParametersToSend.Add("oVirtServerName",$PSBoundParameters['PipedObject'].oVirtServer)}
 		$PipedObjectRetlatedClassMethods = $Null; 
-		IF($PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}){
+		IF($PSBoundParameters['PipedObject']){$PipedObjectRetlatedClassMethods = ($PSBoundParameters['PipedObject']) | Get-Member -MemberType Method -EA SilentlyContinue | Select -ExpandProperty Name | ?{$_ -Match $oVxObjectName}}
+		IF($PipedObjectRetlatedClassMethods){
 			ForEach($Method in $PipedObjectRetlatedClassMethods){
 				($PSBoundParameters['PipedObject']).$Method()
 			}

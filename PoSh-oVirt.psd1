@@ -12,7 +12,7 @@
 RootModule = 'PoSh-oVirt.psm1'
 
 # Version number of this module.
-ModuleVersion = '4.5.5.153005'
+ModuleVersion = '4.5.5.153006'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
