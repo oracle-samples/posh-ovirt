@@ -1000,7 +1000,7 @@ Function Import-oVirtCertificate{
 					$oVirt_SelfSigned_CRT = Invoke-RestMethod -Uri $CertURL -EV WebError
 				}Catch{
 					IF($WebError){
-						$FormattedWebError = (Format-WebError -WebError $WebError -Body $Null -Uri $CertURL); Write-Error $FormattedWebError; $FormattedWebError; Break
+						$FormattedWebError = (Format-WebError -WebError $WebError -Body $Null -Uri $CertURL); $oVirt_SelfSigned_CRT = $Null; Write-Error $FormattedWebError; $FormattedWebError;
 					}Else{Write-Warning "FAILED to Retrieve oVirt Self-Signed Cert from [$($CertURL)]"}
 				}
 			}
